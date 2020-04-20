@@ -3,22 +3,21 @@ import lombok.Setter;
 
 public class Article {
 
-    @Getter @Setter
-    private String URL;
+    @Getter
+    @Setter
+    private final String URL;
 
-    @Getter @Setter
-    private String name;
+    @Getter
+    @Setter
+    private final String NAME;
 
-    public Article(String URL, String name) {
+    public Article(String URL, String NAME) {
         this.URL = URL;
-        this.name = name;
+        this.NAME = NAME;
     }
 
     @Override
     public String toString() {
-        return "Article{" +
-                "URL='" + URL + '\'' +
-                ", name='" + name + '\'' +
-                '}';
+        return "\n" + "URL = " + URL + "; name = " + NAME;
     }
 }
